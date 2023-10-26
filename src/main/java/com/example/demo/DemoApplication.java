@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.Service.S_Arduino;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.fazecast.jSerialComm.*;
@@ -16,6 +17,7 @@ public class DemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 		initialize();
+
 	}
 
 
@@ -27,7 +29,7 @@ public class DemoApplication {
 			return;
 		}
 
-		serialPort = ports[0]; // Use a primeira porta serial encontrada, você pode ajustar isso conforme necessário
+		serialPort = ports[1]; // Use a primeira porta serial encontrada, você pode ajustar isso conforme necessário
 
 		if (!serialPort.openPort()) {
 			System.out.println("Falha ao abrir a porta serial.");
@@ -51,8 +53,13 @@ public class DemoApplication {
 		while (true) {
 			try {
 				if (input.ready()) {
-					String inputLine = input.readLine();
-					System.out.println("Dados recebidos: " + inputLine);
+					String temperatura = input.readLine();
+					String pressao = input.readLine();
+					String oleo = input.readLine();
+					S_Arduino.infoArduino(temperatura, pressao, oleo);
+
+					System.out.println("Dados recebidos: " + temperatura);
+
 					// Faça o processamento necessário com os dados recebidos do teclado numérico
 				}
 			} catch (IOException e) {
