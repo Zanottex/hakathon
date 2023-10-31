@@ -28,11 +28,11 @@ public class M_Arduino {
         this.temperatura = temperatura;
     }
 
-    public double getQuantidade() {
+    public double getOleo() {
         return oleo;
     }
 
-    public void setQuantidade(double oleo) {
+    public void setOleo(double oleo) {
         this.oleo = oleo;
     }
 

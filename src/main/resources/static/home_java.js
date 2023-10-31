@@ -55,12 +55,15 @@ jQuery(document).ready(function($){
     target.parent().addClass('active');
 });
 
-while(true){
-$('#1').text(arduino.getTemperatura);
-$('#2').text(arduino.getOleo);
-$('#3').text(arduino.getPressao);
-delay(1000)
+function fazerRequisicao(){
+        $.get("/otocaminho",function(data){
+            $('#1').text(data.temperatura);
+            $('#2').text(data.oleo);
+            $('#3').text(data.pressao);
+        });
+        setTimeout(fazerRequisicao, 3000);
 }
+fazerRequisicao()
 
 
 // Add active class on another page linked

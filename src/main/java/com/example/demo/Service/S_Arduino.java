@@ -29,7 +29,7 @@ public class S_Arduino {
             M_Arduino m_arduino = new M_Arduino();
             m_arduino.setTemperatura((int) Long.parseLong(temperatura));
             m_arduino.setPressao(Long.parseLong(pressao));
-            m_arduino.setQuantidade(Long.parseLong(oleo));
+            m_arduino.setOleo(Long.parseLong(oleo));
             try {
                 r_arduino.save(m_arduino);
                 mensagem += "Deu bom";

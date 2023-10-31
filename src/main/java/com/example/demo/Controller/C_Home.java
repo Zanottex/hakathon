@@ -6,12 +6,18 @@ import com.example.demo.Service.S_Arduino;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class C_Home {
     @GetMapping("/")
-    public String getHome(Model model){
-        model.addAttribute("arduino",S_Arduino.dados());
+    public String getHome(){
         return "Home";
+    }
+
+    @GetMapping("/otocaminho")
+    @ResponseBody
+    public M_Arduino getDados(){
+        return S_Arduino.dados();
     }
 }

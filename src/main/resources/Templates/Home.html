@@ -56,20 +56,20 @@
     <div class="row">
         <div class="col-sm-4 text-center mt-5">
             <h1>Esteira</h1>
-            <h2 id="1" th:text="'Temperatura:' + ${arduino.getTemperatura}">Velocidade: <a class="navbar-brand text-end" ></a></h2>
+            <h2 >Velocidade: <span id="1"></span><a class="navbar-brand text-end" ></a></h2>
             <h2>Numero de Série: 000001</h2>
             <h2>Setor: Geral</h2>
         </div>
         <div class="col-sm-4 text-center mt-5">
             <h1>Óleo</h1>
-            <h2 id="2" th:text="'Quantidade:' +${arduino.getQuantidade}">Quantidade: <a class="navbar-brand text-end" ></a></h2>
+            <h2 >Quantidade: <span id="2"></span><a class="navbar-brand text-end" ></a></h2>
             <h2>Numero de Série: 000002 </h2>
             <h2>Setor: Geral</h2>
 
         </div>
         <div class="col-sm-4 text-center mt-5">
             <h1>Prensa Manual</h1>
-            <h2 id="3" th:text="'Pressao:' +${arduino.getPressao}">Pressão: <a class="navbar-brand text-end" ></a></h2>
+            <h2>Pressão: <span id="3"></span><a class="navbar-brand text-end" ></a></h2>
             <h2>Numero de Série: 000003 </h2>
             <h2>Setor: Estamparia</h2>
         </div>
