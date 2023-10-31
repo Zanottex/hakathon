@@ -39,4 +39,7 @@ public class S_Arduino {
         }
         return mensagem;
     }
+    public static M_Arduino dados(){
+        return r_arduino.findLastReg();
+    }
 }

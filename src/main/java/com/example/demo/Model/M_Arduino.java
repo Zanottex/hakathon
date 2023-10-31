@@ -9,7 +9,7 @@ public class M_Arduino {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private double temperatura;
-    private double quantidade;
+    private double oleo;
     private double pressao;
 
     public long getId() {
@@ -29,11 +29,11 @@ public class M_Arduino {
     }
 
     public double getQuantidade() {
-        return quantidade;
+        return oleo;
     }
 
-    public void setQuantidade(double quantidade) {
-        this.quantidade = quantidade;
+    public void setQuantidade(double oleo) {
+        this.oleo = oleo;
     }
 
     public double getPressao() {

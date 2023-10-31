@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.Model.M_Arduino;
 import com.example.demo.Service.S_Arduino;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -58,7 +59,9 @@ public class DemoApplication {
 					String oleo = input.readLine();
 					S_Arduino.infoArduino(temperatura, pressao, oleo);
 
-					System.out.println("Dados recebidos: " + temperatura);
+					System.out.println("Dados recebidos (Temp): " + temperatura);
+					System.out.println("Dados recebidos (pressao): " + pressao);
+					System.out.println("Dados recebidos (oleo): " + oleo);
 
 					// Faça o processamento necessário com os dados recebidos do teclado numérico
 				}
